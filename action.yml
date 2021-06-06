@@ -15,14 +15,9 @@ inputs:
   ssh_private_key:
     description: 'you can copy private_key from your *.pem file, keep format'
     required: true
-  local_path:
-    description: 'will put all file under this path'
+  files:
+    description: 'files to delete from the server'
     required: true
-    default: ./*
-  remote_path:
-    description: 'files will copy to under remote_path'
-    required: true
-    default: /
 
   args:
     description: 'sftp args'
@@ -37,8 +32,7 @@ runs:
     - ${{ inputs.server }}
     - ${{ inputs.port }}
     - ${{ inputs.ssh_private_key }}
-    - ${{ inputs.local_path }}
-    - ${{ inputs.remote_path }}
+    - ${{ inputs.files }}
     - ${{ inputs.args }}
 
 branding:
