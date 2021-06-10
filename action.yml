@@ -15,8 +15,8 @@ inputs:
   ssh_private_key:
     description: 'you can copy private_key from your *.pem file, keep format'
     required: true
-  files:
-    description: 'files to delete from the server'
+  file:
+    description: 'file to delete from the server'
     required: true
 
   args:
